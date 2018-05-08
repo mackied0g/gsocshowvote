@@ -10,3 +10,5 @@ Next.js simple JavaScript starter repository.
 
 ## run app
 `yarn run dev` or `npm run dev`
+
+see app running at http://localhost:3000/
