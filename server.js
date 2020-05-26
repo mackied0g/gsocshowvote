@@ -11,10 +11,10 @@ const express = require('express')
     const port = process.env.PORT || 8080
 
     const pusher = new Pusher({
-      appId: 'app_id',
-      key: 'key',
-      secret: 'secret',
-      cluster: 'cluster',
+    app_id = "1007918",
+    key = "a405c5b0b68fab561b42",
+    secret = "d72fdb57ae082a3def2f",
+    cluster = "mt1",
       encrypted: true
     })
 
