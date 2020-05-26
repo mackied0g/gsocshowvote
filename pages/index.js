@@ -19,6 +19,28 @@ import React from 'react'
       }
 
       render () {
+        componentDidMount () {
+          this.receiveUpdateFromPusher()
+        }
+  
+        receiveUpdateFromPusher () {
+          channel.bind('new-votes', data => {
+            this.setState({
+              data
+            })
+          })
+          console.log('app subscription to event successful')
+        }
+  
+        handleVote (data) {
+          axios.post('http://localhost:8080/vote', data)
+          .then(res => {
+            console.log('received by server')
+          })
+          .catch(error => {
+            throw error
+          })
+        }
         return (
           <div>
             <Chart data={this.state.data} />
