@@ -46,3 +46,4 @@ export default class Chart extends React.Component {
         />
     )
   }
+}
